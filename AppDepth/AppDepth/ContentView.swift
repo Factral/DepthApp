@@ -16,11 +16,12 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
         viewModel.setupARSession()
+        arView.debugOptions.insert(.showWorldOrigin)
         return arView
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {
-               if let depthMap = viewModel.depthMap {
+            if let depthMap = viewModel.depthMap {
             // Create a CIImage from the depth map
             let depthMapImage = CIImage(cvPixelBuffer: depthMap)
             
