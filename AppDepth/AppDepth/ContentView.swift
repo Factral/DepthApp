@@ -16,11 +16,23 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
         viewModel.setupARSession()
-        arView.session.delegate = viewModel
         return arView
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ uiView: ARView, context: Context) {
+               if let depthMap = viewModel.depthMap {
+            // Create a CIImage from the depth map
+            let depthMapImage = CIImage(cvPixelBuffer: depthMap)
+            
+            // Create a UIImageView to display the depth map
+            let depthMapImageView = UIImageView(image: UIImage(ciImage: depthMapImage))
+            depthMapImageView.contentMode = .scaleAspectFit
+            
+            // Add the UIImageView to the ARView
+            uiView.addSubview(depthMapImageView)
+            depthMapImageView.frame = uiView.bounds
+        }
+    }
 }
 
 class ARViewModel: NSObject, ARSessionDelegate, ObservableObject {
@@ -29,7 +41,7 @@ class ARViewModel: NSObject, ARSessionDelegate, ObservableObject {
 
     func setupARSession() {
         arSession = ARSession()
-        arView.session.delegate = viewModel
+        arSession?.delegate = self
         let configuration = ARWorldTrackingConfiguration()
         configuration.frameSemantics = .sceneDepth
         arSession?.run(configuration)
@@ -37,5 +49,6 @@ class ARViewModel: NSObject, ARSessionDelegate, ObservableObject {
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         depthMap = frame.sceneDepth?.depthMap
+        print(depthMap)
     }
 }
