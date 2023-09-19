@@ -15,6 +15,7 @@ struct ARViewContainer: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
+        viewModel.setupARSession()
         arView.session.delegate = viewModel
         return arView
     }
@@ -24,6 +25,15 @@ struct ARViewContainer: UIViewRepresentable {
 
 class ARViewModel: NSObject, ARSessionDelegate, ObservableObject {
     @Published var depthMap: CVPixelBuffer?
+    var arSession: ARSession?
+
+    func setupARSession() {
+        arSession = ARSession()
+        arView.session.delegate = viewModel
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.frameSemantics = .sceneDepth
+        arSession?.run(configuration)
+    }
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         depthMap = frame.sceneDepth?.depthMap
