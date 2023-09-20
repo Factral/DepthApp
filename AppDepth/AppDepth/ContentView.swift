@@ -50,6 +50,6 @@ class ARViewModel: NSObject, ARSessionDelegate, ObservableObject {
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         depthMap = frame.sceneDepth?.depthMap
-        print(depthMap)
+        
     }
 }
