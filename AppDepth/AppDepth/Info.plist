@@ -21,7 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>se necesita usar la camara</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>se necesita usar la libreria de fotos</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
