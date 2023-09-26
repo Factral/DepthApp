@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		090AEF152AC3399100BB338B /* DepthEstimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF142AC3399100BB338B /* DepthEstimationApp.swift */; };
-		090AEF172AC3399100BB338B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF162AC3399100BB338B /* ContentView.swift */; };
 		090AEF192AC3399200BB338B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090AEF182AC3399200BB338B /* Assets.xcassets */; };
 		090AEF1C2AC3399200BB338B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090AEF1B2AC3399200BB338B /* Preview Assets.xcassets */; };
+		090AEF242AC339B300BB338B /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF232AC339B300BB338B /* ARManager.swift */; };
+		090AEF262AC339C300BB338B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF252AC339C300BB338B /* ContentView.swift */; };
+		090AEF282AC339E600BB338B /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF272AC339E600BB338B /* CustomARView.swift */; };
+		090AEF2A2AC339F900BB338B /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF292AC339F900BB338B /* CustomARViewRepresentable.swift */; };
+		090AEF2C2AC33A0900BB338B /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF2B2AC33A0900BB338B /* ARAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		090AEF112AC3399100BB338B /* DepthEstimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthEstimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090AEF142AC3399100BB338B /* DepthEstimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthEstimationApp.swift; sourceTree = "<group>"; };
-		090AEF162AC3399100BB338B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		090AEF182AC3399200BB338B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		090AEF1B2AC3399200BB338B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		090AEF232AC339B300BB338B /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
+		090AEF252AC339C300BB338B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		090AEF272AC339E600BB338B /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		090AEF292AC339F900BB338B /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
+		090AEF2B2AC33A0900BB338B /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,8 @@
 		090AEF132AC3399100BB338B /* DepthEstimation */ = {
 			isa = PBXGroup;
 			children = (
+				090AEF222AC339A400BB338B /* Components */,
 				090AEF142AC3399100BB338B /* DepthEstimationApp.swift */,
-				090AEF162AC3399100BB338B /* ContentView.swift */,
 				090AEF182AC3399200BB338B /* Assets.xcassets */,
 				090AEF1A2AC3399200BB338B /* Preview Content */,
 			);
@@ -65,6 +73,18 @@
 				090AEF1B2AC3399200BB338B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		090AEF222AC339A400BB338B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				090AEF232AC339B300BB338B /* ARManager.swift */,
+				090AEF252AC339C300BB338B /* ContentView.swift */,
+				090AEF272AC339E600BB338B /* CustomARView.swift */,
+				090AEF292AC339F900BB338B /* CustomARViewRepresentable.swift */,
+				090AEF2B2AC33A0900BB338B /* ARAction.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				090AEF172AC3399100BB338B /* ContentView.swift in Sources */,
+				090AEF2A2AC339F900BB338B /* CustomARViewRepresentable.swift in Sources */,
+				090AEF242AC339B300BB338B /* ARManager.swift in Sources */,
+				090AEF2C2AC33A0900BB338B /* ARAction.swift in Sources */,
+				090AEF262AC339C300BB338B /* ContentView.swift in Sources */,
+				090AEF282AC339E600BB338B /* CustomARView.swift in Sources */,
 				090AEF152AC3399100BB338B /* DepthEstimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

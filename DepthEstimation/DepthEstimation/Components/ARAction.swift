@@ -1,8 +1,7 @@
-//
-//  ARAction.swift
-//  DepthEstimation
-//
-//  Created by Fabian Perez on 26/09/23.
-//
+// Created by Fabian Perez
 
-import Foundation
+import SwiftUI
+
+enum ARAction {
+    case takeSnapshot
+}

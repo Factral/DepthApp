@@ -1,8 +1,10 @@
-//
-//  ARManager.swift
-//  DepthEstimation
-//
-//  Created by Fabian Perez on 26/09/23.
-//
+// Created by Fabian Perez
 
-import Foundation
+import Combine
+
+class ARManager {
+    static let shared = ARManager()
+    private init() { }
+    
+    var actionStream = PassthroughSubject<ARAction, Never>()
+}
