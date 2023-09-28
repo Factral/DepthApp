@@ -10,6 +10,9 @@ struct ContentView : View {
         CustomARViewRepresentable()
             .ignoresSafeArea()
             .overlay(alignment: .bottom) {
+                
+                
+                
                 Button {
                     print("button pressed")
                     ARManager.shared.actionStream.send(.takeSnapshot)
@@ -22,6 +25,9 @@ struct ContentView : View {
                         .cornerRadius(20)
                         .padding()
                 }
+                
+                
+                
             }
             
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02977A4C2AC38ACB00F2EECB /* PngEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02977A4B2AC38ACB00F2EECB /* PngEncoder.mm */; };
+		02977A4F2AC38AE700F2EECB /* lodepng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02977A4D2AC38AE700F2EECB /* lodepng.cpp */; };
 		090AEF152AC3399100BB338B /* DepthEstimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AEF142AC3399100BB338B /* DepthEstimationApp.swift */; };
 		090AEF192AC3399200BB338B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090AEF182AC3399200BB338B /* Assets.xcassets */; };
 		090AEF1C2AC3399200BB338B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090AEF1B2AC3399200BB338B /* Preview Assets.xcassets */; };
@@ -18,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02977A232AC37D9F00F2EECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02977A4A2AC38ACB00F2EECB /* DepthEstimation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DepthEstimation-Bridging-Header.h"; sourceTree = "<group>"; };
+		02977A4B2AC38ACB00F2EECB /* PngEncoder.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PngEncoder.mm; sourceTree = "<group>"; };
+		02977A4D2AC38AE700F2EECB /* lodepng.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lodepng.cpp; sourceTree = "<group>"; };
+		02977A502AC38B0900F2EECB /* PngEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PngEncoder.h; sourceTree = "<group>"; };
+		02977A512AC38B6F00F2EECB /* lodepng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lodepng.h; sourceTree = "<group>"; };
 		090AEF112AC3399100BB338B /* DepthEstimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthEstimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090AEF142AC3399100BB338B /* DepthEstimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthEstimationApp.swift; sourceTree = "<group>"; };
 		090AEF182AC3399200BB338B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +48,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02977A422AC389D100F2EECB /* CCode */ = {
+			isa = PBXGroup;
+			children = (
+				02977A4B2AC38ACB00F2EECB /* PngEncoder.mm */,
+				02977A4A2AC38ACB00F2EECB /* DepthEstimation-Bridging-Header.h */,
+				02977A4D2AC38AE700F2EECB /* lodepng.cpp */,
+				02977A502AC38B0900F2EECB /* PngEncoder.h */,
+				02977A512AC38B6F00F2EECB /* lodepng.h */,
+			);
+			path = CCode;
+			sourceTree = "<group>";
+		};
 		090AEF082AC3399000BB338B = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +79,8 @@
 		090AEF132AC3399100BB338B /* DepthEstimation */ = {
 			isa = PBXGroup;
 			children = (
+				02977A422AC389D100F2EECB /* CCode */,
+				02977A232AC37D9F00F2EECB /* Info.plist */,
 				090AEF222AC339A400BB338B /* Components */,
 				090AEF142AC3399100BB338B /* DepthEstimationApp.swift */,
 				090AEF182AC3399200BB338B /* Assets.xcassets */,
@@ -119,6 +141,7 @@
 				TargetAttributes = {
 					090AEF102AC3399100BB338B = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -159,8 +182,10 @@
 			files = (
 				090AEF2A2AC339F900BB338B /* CustomARViewRepresentable.swift in Sources */,
 				090AEF242AC339B300BB338B /* ARManager.swift in Sources */,
+				02977A4C2AC38ACB00F2EECB /* PngEncoder.mm in Sources */,
 				090AEF2C2AC33A0900BB338B /* ARAction.swift in Sources */,
 				090AEF262AC339C300BB338B /* ContentView.swift in Sources */,
+				02977A4F2AC38AE700F2EECB /* lodepng.cpp in Sources */,
 				090AEF282AC339E600BB338B /* CustomARView.swift in Sources */,
 				090AEF152AC3399100BB338B /* DepthEstimationApp.swift in Sources */,
 			);
@@ -288,11 +313,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DepthEstimation/Preview Content\"";
+				DEVELOPMENT_TEAM = Q59888MYK2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DepthEstimation/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "se necesita usar la camara";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = fotos;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,9 +335,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fabian.DepthEstimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hoover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DepthEstimation/CCode/DepthEstimation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,11 +350,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DepthEstimation/Preview Content\"";
+				DEVELOPMENT_TEAM = Q59888MYK2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DepthEstimation/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "se necesita usar la camara";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = fotos;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,9 +372,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fabian.DepthEstimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hoover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DepthEstimation/CCode/DepthEstimation-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

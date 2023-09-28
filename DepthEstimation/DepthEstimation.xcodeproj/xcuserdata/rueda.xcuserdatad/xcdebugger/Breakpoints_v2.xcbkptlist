@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "58F26FBA-7F4A-4350-BFD0-969D5E53AC6B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79FD9B82-D493-43FA-BAAF-E1C7480C14A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DepthEstimation/Components/CustomARView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "takeSnapshot()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "79FD9B82-D493-43FA-BAAF-E1C7480C14A0 - f3c3644decc3a236"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DepthEstimation.CustomARView.takeSnapshot() -&gt; ()"
+                  moduleName = "DepthEstimation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rueda/Documents/PyCharmProjects/Fabian_Manuel/DepthApp/DepthEstimation/DepthEstimation/Components/CustomARView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "2120">
+               </Location>
+               <Location
+                  uuid = "79FD9B82-D493-43FA-BAAF-E1C7480C14A0 - f3c3644decc3a2f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DepthEstimation.CustomARView.takeSnapshot() -&gt; ()"
+                  moduleName = "DepthEstimation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rueda/Documents/PyCharmProjects/Fabian_Manuel/DepthApp/DepthEstimation/DepthEstimation/Components/CustomARView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "2316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
